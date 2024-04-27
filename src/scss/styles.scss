@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --white: #ffffff;
+  --dark: #000000;
+  --primary: #15af44;
+  --primary-dark: #189541;
+  --secondary: #6a7787;
+  --bg: #1a1e23;
+  --bg-dark: #1d242c;
+  --bg-light: #272d36;
+  --sidebar-bg: #2a3139;
+  --card-bg: #252b33;
+  --primary-font: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+.app-svg-icon.inherit-fill svg path {
+  fill: currentColor;
+}

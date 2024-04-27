@@ -1,0 +1,14 @@
+<a routerLink="/" class="sidebar-logo"><app-svg-icon name="logo"></app-svg-icon></a>
+<ul class="sidebar-menu">
+    @for (item of menuItems; track $index) {
+    <li class="sidebar-menu-item">
+        <a [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            class="sidebar-menu-link">
+            <app-svg-icon extraClasses="inherit-fill" [name]="item.icon"></app-svg-icon>
+            <span class="sidebar-menu-link-text">
+                {{item.label}}
+            </span>
+        </a>
+    </li>
+    }
+</ul>
