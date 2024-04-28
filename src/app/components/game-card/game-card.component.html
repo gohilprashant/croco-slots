@@ -1,0 +1,15 @@
+@if (game.tags.includes('new')) {
+<app-chip>New</app-chip>
+}
+<div class="game-card-img-wrapper">
+    <img [src]="game.imageSet?.webp ? game.imageSet?.webp : game.image" [alt]="game.name" class="game-card-img"
+        loading="lazy">
+    <div class="game-card-overlay">
+        <button class="game-card-action-btn">
+            Play
+        </button>
+    </div>
+</div>
+<h5 class="game-card-title">
+    {{game.name}}
+</h5>

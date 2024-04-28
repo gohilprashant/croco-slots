@@ -1,0 +1,25 @@
+@import "../../../../../scss/mixins.scss";
+:host {
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.1rem;
+  @include desktop-md {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.game-card-wrapper {
+  display: flex;
+  &:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.full-width-item {
+  grid-column: 1 / -1;
+}

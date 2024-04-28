@@ -1,0 +1,10 @@
+{
+  "/api/**": {
+    "target": "https://cms.crocobet.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

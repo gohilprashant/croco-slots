@@ -1,0 +1,10 @@
+@mixin desktop-md {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}

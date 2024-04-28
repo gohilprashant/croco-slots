@@ -1,1 +1,17 @@
-<p>slot works!</p>
+<app-hero-img imgSrc="/assets/images/hero.jpg" imgAlt="hero"></app-hero-img>
+<div class="tabs-wrapper">
+    <app-category-tabs [categories]="categories()" (categoryChange)="handleSelection($event)"
+        [selectedItem]="selectedItem()"></app-category-tabs>
+    <app-provider-tabs [providers]="providers()" (providerChange)="handleSelection($event)"
+        [selectedItem]="selectedItem()"></app-provider-tabs>
+</div>
+
+@if (error()) {
+<app-error-message>{{error()}}</app-error-message>
+}
+
+@if (isLoading()) {
+<app-info>Loading...</app-info>
+} @else {
+<app-slot-list [games]="games()"></app-slot-list>
+}

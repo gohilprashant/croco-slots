@@ -1,0 +1,23 @@
+@import "../../../../../scss/mixins.scss";
+:host {
+  display: flex;
+  background-color: var(--bg-dark2);
+  padding: 2rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.provider-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  &-item {
+    font-size: 1.4rem;
+    cursor: pointer;
+    &.active {
+      color: var(--primary);
+    }
+  }
+  @include desktop {
+    gap: 2rem;
+  }
+}

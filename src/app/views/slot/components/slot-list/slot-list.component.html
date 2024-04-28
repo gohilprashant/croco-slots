@@ -1,0 +1,13 @@
+@if (games.length) {
+@for (game of games; track $index) {
+<div class="game-card-wrapper">
+    <app-game-card [game]="game"></app-game-card>
+</div>
+}
+} @else {
+<div class="full-width-item">
+    <app-info>
+        No games found this selection!
+    </app-info>
+</div>
+}

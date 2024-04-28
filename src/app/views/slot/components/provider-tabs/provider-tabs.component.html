@@ -1,0 +1,9 @@
+<ul class="provider-tabs">
+    <li class="provider-tabs-item" (click)="handleProviderChange('all')" [class.active]="selectedItem === 'all'">
+        All
+    </li>
+    @for (provider of providers; track $index) {
+    <li class="provider-tabs-item" (click)="handleProviderChange(provider.provider)"
+        [class.active]="provider.provider === selectedItem">{{provider.name}}</li>
+    }
+</ul>

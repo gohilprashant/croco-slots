@@ -1,0 +1,12 @@
+<ul class="category-tabs">
+    @for (category of categories; track $index) {
+    <li class="category-tabs-item" [class.active]="category.category === selectedItem"
+        (click)="handleCategoryChange(category.category)">
+        <span class="badge">{{category.totalGames}}</span>
+        <span class="icon-wrapper">
+            <app-svg-icon [name]="category.icon"></app-svg-icon>
+        </span>
+        {{category.name}}
+    </li>
+    }
+</ul>

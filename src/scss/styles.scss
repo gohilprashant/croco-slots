@@ -8,17 +8,25 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 :root {
   --white: #ffffff;
   --dark: #000000;
   --primary: #15af44;
   --primary-dark: #189541;
   --secondary: #6a7787;
+  --secondary-light: #bbbdc0;
+  --danger: #dc3545;
   --bg: #1a1e23;
   --bg-dark: #1d242c;
-  --bg-light: #272d36;
+  --bg-dark2: #272d36;
   --sidebar-bg: #2a3139;
   --card-bg: #252b33;
+  --card-bg-light: #454d57;
   --primary-font: "Open Sans", sans-serif;
 }
 
@@ -34,4 +42,8 @@ body {
 
 .app-svg-icon.inherit-fill svg path {
   fill: currentColor;
+}
+
+ul {
+  list-style-type: none;
 }
